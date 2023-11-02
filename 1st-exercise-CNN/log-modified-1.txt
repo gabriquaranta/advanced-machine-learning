@@ -1,0 +1,104 @@
+====================================================================================================
+LR = 1e-2            ### The initial Learning Rate 
+MOMENTUM = 0.9       # Hyperparameter for SGD, keep this at 0.9 when using SGD
+WEIGHT_DECAY = 5e-5  # Regularization, you can keep this at the default
+
+NUM_EPOCHS = 30      # Total number of training epochs (iterations over dataset)
+STEP_SIZE = 10       ### How many epochs before decreasing learning rate (if using a step-down policy)
+GAMMA = 0.1          # Multiplicative factor for learning rate step-down
+====================================================================================================
+TRAINING
+    Starting epoch 1/30, LR = [0.01]
+    Step 0, Loss 4.625687122344971
+    Step 10, Loss 4.614316463470459
+    Starting epoch 2/30, LR = [0.01]
+    Step 20, Loss 4.58881139755249
+    Step 30, Loss 4.56414794921875
+    Starting epoch 3/30, LR = [0.01]
+    Step 40, Loss 4.474630355834961
+    Starting epoch 4/30, LR = [0.01]
+    Step 50, Loss 4.4276299476623535
+    Step 60, Loss 4.259693622589111
+    Starting epoch 5/30, LR = [0.01]
+    Step 70, Loss 4.265649795532227
+    Starting epoch 6/30, LR = [0.01]
+    Step 80, Loss 4.094951152801514
+    Step 90, Loss 4.269065856933594
+    Starting epoch 7/30, LR = [0.01]
+    Step 100, Loss 4.282318592071533
+    Step 110, Loss 4.095557689666748
+    Starting epoch 8/30, LR = [0.01]
+    Step 120, Loss 3.992082118988037
+    Starting epoch 9/30, LR = [0.01]
+    Step 130, Loss 4.030055999755859
+    Step 140, Loss 3.855969190597534
+    Starting epoch 10/30, LR = [0.01]
+    Step 150, Loss 3.9131319522857666
+    Starting epoch 11/30, LR = [0.001]
+    Step 160, Loss 3.725872755050659
+    Step 170, Loss 3.6431329250335693
+    Starting epoch 12/30, LR = [0.001]
+    Step 180, Loss 3.7977938652038574
+    Step 190, Loss 3.833392858505249
+    Starting epoch 13/30, LR = [0.001]
+    Step 200, Loss 3.6862783432006836
+    Starting epoch 14/30, LR = [0.001]
+    Step 210, Loss 3.673278331756592
+    Step 220, Loss 3.6829144954681396
+    Starting epoch 15/30, LR = [0.001]
+    Step 230, Loss 3.5866358280181885
+    Starting epoch 16/30, LR = [0.001]
+    Step 240, Loss 3.6333634853363037
+    Step 250, Loss 3.6784324645996094
+    Starting epoch 17/30, LR = [0.001]
+    Step 260, Loss 3.7256062030792236
+    Step 270, Loss 3.4893720149993896
+    Starting epoch 18/30, LR = [0.001]
+    Step 280, Loss 3.7240447998046875
+    Starting epoch 19/30, LR = [0.001]
+    Step 290, Loss 3.5682694911956787
+    Step 300, Loss 3.5298984050750732
+    Starting epoch 20/30, LR = [0.001]
+    Step 310, Loss 3.5045671463012695
+    Starting epoch 21/30, LR = [0.0001]
+    Step 320, Loss 3.409102201461792
+    Step 330, Loss 3.611450672149658
+    Starting epoch 22/30, LR = [0.0001]
+    Step 340, Loss 3.703065872192383
+    Step 350, Loss 3.5086722373962402
+    Starting epoch 23/30, LR = [0.0001]
+    Step 360, Loss 3.4831974506378174
+    Starting epoch 24/30, LR = [0.0001]
+    Step 370, Loss 3.450054883956909
+    Step 380, Loss 3.3625729084014893
+    Starting epoch 25/30, LR = [0.0001]
+    Step 390, Loss 3.550320625305176
+    Starting epoch 26/30, LR = [0.0001]
+    Step 400, Loss 3.498849391937256
+    Step 410, Loss 3.5051677227020264
+    Starting epoch 27/30, LR = [0.0001]
+    Step 420, Loss 3.455048084259033
+    Step 430, Loss 3.516538143157959
+    Starting epoch 28/30, LR = [0.0001]
+    Step 440, Loss 3.473738193511963
+    Starting epoch 29/30, LR = [0.0001]
+    Step 450, Loss 3.4068515300750732
+    Step 460, Loss 3.5607147216796875
+    Starting epoch 30/30, LR = [0.0001]
+    Step 470, Loss 3.464630365371704
+
+VALIDATION
+    Validation Accuracy: 0.24827109266943292
+
+TESTING
+    Test Accuracy: 0.24541997926028344
+
+
+COMPARISON 
+**Base Model:**
+- Validation Accuracy: 0.08575380359612725
+- Test Accuracy: 0.09194607673695127
+
+**Modified Model 1:**
+- Validation Accuracy: 0.24827109266943292
+- Test Accuracy: 0.24541997926028344
