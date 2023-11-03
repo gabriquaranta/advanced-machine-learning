@@ -1,0 +1,110 @@
+====================================================================================================
+LR = 1e-3            # The initial Learning Rate
+MOMENTUM = 0.9       # Hyperparameter for SGD, keep this at 0.9 when using SGD
+WEIGHT_DECAY = 5e-5  # Regularization, you can keep this at the default
+NUM_EPOCHS = 30      # Total number of training epochs (iterations over dataset)
+STEP_SIZE = 20       # How many epochs before decreasing learning rate (if using a step-down policy)
+GAMMA = 0.1          # Multiplicative factor for learning rate step-down
+====================================================================================================
+Pretained weights (+ ImageNet’s mean and standard deviation) on ImageNet finetuned on Caltech:
+- transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+- net = alexnet(weights="DEFAULT")
+====================================================================================================
+TRAINING
+    Starting epoch 1/30, LR = [0.001]
+    Step 0, Loss 4.805836200714111
+    Step 10, Loss 3.355273962020874
+    Starting epoch 2/30, LR = [0.001]
+    Step 20, Loss 2.3311820030212402
+    Step 30, Loss 1.986475944519043
+    Starting epoch 3/30, LR = [0.001]
+    Step 40, Loss 1.251585841178894
+    Starting epoch 4/30, LR = [0.001]
+    Step 50, Loss 0.8348543047904968
+    Step 60, Loss 0.6749820113182068
+    Starting epoch 5/30, LR = [0.001]
+    Step 70, Loss 0.596197783946991
+    Starting epoch 6/30, LR = [0.001]
+    Step 80, Loss 0.3514523208141327
+    Step 90, Loss 0.32672378420829773
+    Starting epoch 7/30, LR = [0.001]
+    Step 100, Loss 0.2212471067905426
+    Step 110, Loss 0.21683239936828613
+    Starting epoch 8/30, LR = [0.001]
+    Step 120, Loss 0.22367025911808014
+    Starting epoch 9/30, LR = [0.001]
+    Step 130, Loss 0.16227982938289642
+    Step 140, Loss 0.18015934526920319
+    Starting epoch 10/30, LR = [0.001]
+    Step 150, Loss 0.07147255539894104
+    Starting epoch 11/30, LR = [0.001]
+    Step 160, Loss 0.10202005505561829
+    Step 170, Loss 0.09102080017328262
+    Starting epoch 12/30, LR = [0.001]
+    Step 180, Loss 0.061842333525419235
+    Step 190, Loss 0.07681741565465927
+    Starting epoch 13/30, LR = [0.001]
+    Step 200, Loss 0.07529503107070923
+    Starting epoch 14/30, LR = [0.001]
+    Step 210, Loss 0.07358721643686295
+    Step 220, Loss 0.04456527903676033
+    Starting epoch 15/30, LR = [0.001]
+    Step 230, Loss 0.07300015538930893
+    Starting epoch 16/30, LR = [0.001]
+    Step 240, Loss 0.07404130697250366
+    Step 250, Loss 0.03729021176695824
+    Starting epoch 17/30, LR = [0.001]
+    Step 260, Loss 0.029204536229372025
+    Step 270, Loss 0.058302346616983414
+    Starting epoch 18/30, LR = [0.001]
+    Step 280, Loss 0.05307009071111679
+    Starting epoch 19/30, LR = [0.001]
+    Step 290, Loss 0.026369832456111908
+    Step 300, Loss 0.033488478511571884
+    Starting epoch 20/30, LR = [0.001]
+    Step 310, Loss 0.02206246368587017
+    Starting epoch 21/30, LR = [0.0001]
+    Step 320, Loss 0.032584838569164276
+    Step 330, Loss 0.02133544161915779
+    Starting epoch 22/30, LR = [0.0001]
+    Step 340, Loss 0.024515260010957718
+    Step 350, Loss 0.014943691901862621
+    Starting epoch 23/30, LR = [0.0001]
+    Step 360, Loss 0.019095178693532944
+    Starting epoch 24/30, LR = [0.0001]
+    Step 370, Loss 0.021647294983267784
+    Step 380, Loss 0.015508081763982773
+    Starting epoch 25/30, LR = [0.0001]
+    Step 390, Loss 0.03075288236141205
+    Starting epoch 26/30, LR = [0.0001]
+    Step 400, Loss 0.03546677157282829
+    Step 410, Loss 0.0188921969383955
+    Starting epoch 27/30, LR = [0.0001]
+    Step 420, Loss 0.008278666995465755
+    Step 430, Loss 0.033676277846097946
+    Starting epoch 28/30, LR = [0.0001]
+    Step 440, Loss 0.04000179097056389
+    Starting epoch 29/30, LR = [0.0001]
+    Step 450, Loss 0.01983175426721573
+    Step 460, Loss 0.041104767471551895
+    Starting epoch 30/30, LR = [0.0001]
+    Step 470, Loss 0.04706478491425514
+
+VALIDATION
+    Validation Accuracy: 0.8333333333333334
+
+TESTING
+    Test Accuracy: 0.8603525751814726
+
+COMPARISON
+Base Model:
+- Validation Accuracy: 0.08575380359612725
+- Test Accuracy: 0.09194607673695127 
+
+Modified Model 3:
+- Validation Accuracy: 0.29322268326417705
+- Test Accuracy: 0.29692360871068096
+
+ImageNet + Finetune Base Model:
+- Validation Accuracy: 0.8333333333333334
+- Test Accuracy: 0.8603525751814726

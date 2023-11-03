@@ -95,18 +95,18 @@ TESTING
 
 
 COMPARISON
-**Base Model:**
+Base Model:
 - Validation Accuracy: 0.08575380359612725
 - Test Accuracy: 0.09194607673695127 
 
-**Modified Model 1:**
+Modified Model 1:
 - Validation Accuracy: 0.24827109266943292
 - Test Accuracy: 0.24541997926028344
 
-**Modified Model 2:** -> slower cause 10 more epochs
+Modified Model 2: -> slower cause 10 more epochs
 - Validation Accuracy: 0.2773167358229599
 - Test Accuracy: 0.2744555824403733
 
-**Modified Model 3:** -> best
+Modified Model 3: -> best
 - Validation Accuracy: 0.29322268326417705
 - Test Accuracy: 0.29692360871068096
