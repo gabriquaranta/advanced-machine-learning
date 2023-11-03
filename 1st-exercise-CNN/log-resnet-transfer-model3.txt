@@ -1,0 +1,58 @@
+====================================================================================================
+BATCH_SIZE =      ###
+
+LR = 1e-2            ### The initial Learning Rate MOMENTUM = 0.9       #
+Hyperparameter for SGD, keep this at 0.9 when using SGD WEIGHT_DECAY = 5e-5  #
+Regularization, you can keep this at the default NUM_EPOCHS = 30      # Total
+number of training epochs (iterations over dataset) STEP_SIZE = 15       ### How
+many epochs before decreasing learning rate (if using a step-down policy) GAMMA
+= 0.01         ### Multiplicative factor for learning rate step-down
+====================================================================================================
+Pretained weights (+ ImageNet’s mean and standard deviation) on ImageNet
+finetuned on Caltech: - transforms.Normalize(mean=[0.485, 0.456, 0.406],
+std=[0.229, 0.224, 0.225]), - net = resnet50(weights="DEFAULT") - net.fc =
+nn.Linear(2048,NUM_CLASSES)
+====================================================================================================
+Mixed Precision Training: Utilize mixed-precision training to reduce memory
+consumption and accelerate training. You can use the apex library (now included
+in PyTorch as torch.cuda.amp) to enable mixed-precision training. This allows
+you to use lower-precision (e.g., float16) for certain operations, which can
+significantly reduce GPU memory usage.
+
+from torch.cuda.amp import autocast, GradScaler
+for images, labels in train_dataloader:
+    images = images.to(DEVICE)
+    labels = labels.to(DEVICE)
+
+    optimizer.zero_grad()
+
+    with autocast():
+        outputs = net(images)
+        loss = criterion(outputs, labels)
+
+    scaler.scale(loss).backward()
+    scaler.step(optimizer)
+    scaler.update()
+====================================================================================================
+TRAINING
+    1st-exercise-CNN/log-resnet-transfer-model3-training.txt
+    (16 minutes)
+
+VALIDATION
+    Validation Accuracy: 0.9156293222683264
+
+TESTING
+    Test Accuracy: 0.9357068786726581
+
+COMPAARISON
+AlexNet ImageNet + Finetune Base Model:
+- Validation Accuracy: 0.8333333333333334
+- Test Accuracy: 0.8603525751814726
+
+AlexNet ImageNet + Finetune Model 3:
+- Validation Accuracy: 0.8533886583679114
+- Test Accuracy: 0.8627722087798133
+
+ResNet ImageNet + Finetune Model 3:
+- Validation Accuracy: 0.9156293222683264
+- Test Accuracy: 0.9357068786726581
