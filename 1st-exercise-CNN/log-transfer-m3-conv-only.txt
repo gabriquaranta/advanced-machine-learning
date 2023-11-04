@@ -10,7 +10,7 @@ Pretained weights (+ ImageNet’s mean and standard deviation) on ImageNet finet
 - transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 - net = alexnet(weights="DEFAULT")
 ====================================================================================================
-Only Fully connected layers are trained (others frozen):
+Only Convolutional layers are trained (others frozen):
     parameters_to_optimize=[]
     for name, param in net.named_parameters():
         if "classifier" not in name:  
